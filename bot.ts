@@ -6,6 +6,7 @@ const { REST, Routes } = require('discord.js');
 const client = new Client({intents: [GatewayIntentBits.Guilds]});
 
 client.commands = new Collection();
+client.lastChatRevive = 0
 
 const foldersPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(foldersPath);
